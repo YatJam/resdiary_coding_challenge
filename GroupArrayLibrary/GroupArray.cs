@@ -17,6 +17,12 @@ public static class GroupArray
                 "Parameter has to contain at least one element", nameof(inputArray)
             );
         }
+        if (numOfParts <= 0)
+        {
+            throw new ArgumentException(
+                "Parameter has to be a positive integer", nameof(numOfParts)
+            );
+        }
 
         var size = (int)Math.Ceiling((float)inputArray.Length / numOfParts);
 

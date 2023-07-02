@@ -72,10 +72,22 @@ public class GroupArrayTest
     [Fact]
     public void TestGroupArrayElementsThrowsArgumentExceptionWithEmptyInput()
     {
-        object[] input = Array.Empty<object>();
+        var input = Array.Empty<object>();
 
         var ex = Assert.Throws<ArgumentException>(() => GroupArray.GroupArrayElements(input, 3));
 
         Assert.Equal("Parameter has to contain at least one element (Parameter 'inputArray')", ex.Message);
+    }
+
+    [Theory]
+    [InlineData(0)]
+    [InlineData(-4)]
+    public void TestGroupArrayElementsThrowsArgumentExceptionWhenNumOfPartsIsNotPositive(int numOfParts)
+    {
+        var input = new string[]{ "foo", "bar", "baz" };
+
+        var ex = Assert.Throws<ArgumentException>(() => GroupArray.GroupArrayElements(input, numOfParts));
+
+        Assert.Equal("Parameter has to be a positive integer (Parameter 'numOfParts')", ex.Message);
     }
 }
