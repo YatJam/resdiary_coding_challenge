@@ -16,7 +16,12 @@ groupArrayElements([1, 2, 3, 4, 5], 3);
 
 ## Solution
 This repository consists of three parts:
-1. a library implementing a `GroupArrayElements` method which meets the spec above
+1. a library implementing a `GroupArrayElements` method which meets the spec above:
+
+    - returns an array with contents of the `inputArray` divided into a number of parts specified by the `numOfParts` argument,
+    - if the `inputArray` cannot be divided equally, the final part contains the remainder,
+    - if `numOfParts` is more than the length of the `inputArray`, the result will contain empty arrays. Note: depending on the real-life requirements, this case could be handled to throw
+    an exception instead.
 1. a Demo console application which takes user input, calls the `GroupArrayElements` on it, and presents the result back to the user
 1. unit tests written using xUnit
 
@@ -49,7 +54,7 @@ class Program
     static void Main(string[] args)
     {
         ...
-        object[][] result = GroupArray.GroupArrayElements(input_array, n);
+        object[][] result = GroupArray.GroupArrayElements(inputArray, numOfParts);
         ...
     }
 }

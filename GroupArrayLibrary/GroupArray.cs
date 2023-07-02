@@ -6,8 +6,9 @@ public static class GroupArray
     Where the size of the original array cannot be divided equally by N, the final
     part has a length equal to the remainder.
     The method takes the following arguments:
-    * input_array - array to be divided
-    * num_of_parts - a positive integer indicating into how many parts the array should be split
+    * inputArray - array to be divided
+    * numOfParts - a positive integer indicating how many parts the array should be split into.
+                   If higher than the length of the inputArray, the result will contain empty arrays.
     */
     public static T[][] GroupArrayElements<T>(this T[] inputArray, int numOfParts)
     {
