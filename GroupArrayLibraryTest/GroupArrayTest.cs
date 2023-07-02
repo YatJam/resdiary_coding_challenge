@@ -64,12 +64,13 @@ public class GroupArrayTest
                 }
             },
         };
+
     [Fact]
-    public void TestGroupArrayElementsWithNoRemainder()
+    public void TestGroupArrayElementsCanBeCalledAsExtensionMethod()
     {
         var input = new object[]{ 1, 2.0, true, "foo" };
 
-        var result = GroupArray.GroupArrayElements(input, 2);
+        var result = input.GroupArrayElements(2);
 
         Assert.Equal(2, result.Length);
 

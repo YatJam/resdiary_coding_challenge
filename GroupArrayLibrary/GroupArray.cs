@@ -5,10 +5,15 @@ public static class GroupArray
     /* Returns the contents of the array divided into N equally sized arrays.
     Where the size of the original array cannot be divided equally by N, the final
     part has a length equal to the remainder.
+
     The method takes the following arguments:
-    * inputArray - array to be divided
-    * numOfParts - a positive integer indicating how many parts the array should be split into.
+    - inputArray - array to be divided
+    - numOfParts - a positive integer indicating how many parts the array should be split into.
                    If higher than the length of the inputArray, the result will contain empty arrays.
+
+    It can be called in two different ways:
+    - as a static method: GroupArray.GroupArrayElements(inputArray, numOfParts)
+    - as an extension method: inputArray.GroupArrayElements(numOfParts)
     */
     public static T[][] GroupArrayElements<T>(this T[] inputArray, int numOfParts)
     {

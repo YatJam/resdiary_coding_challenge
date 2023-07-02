@@ -20,8 +20,7 @@ This repository consists of three parts:
 
     - returns an array with contents of the `inputArray` divided into a number of parts specified by the `numOfParts` argument,
     - if the `inputArray` cannot be divided equally, the final part contains the remainder,
-    - if `numOfParts` is more than the length of the `inputArray`, the result will contain empty arrays. Note: depending on the real-life requirements, this case could be handled to throw
-    an exception instead.
+    - if `numOfParts` is more than the length of the `inputArray`, the result will contain empty arrays. Note: depending on the real-life requirements, this case could be re-worked to throw an exception instead.
 1. a Demo console application which takes user input, calls the `GroupArrayElements` on it, and presents the result back to the user
 1. unit tests written using xUnit
 
@@ -55,6 +54,9 @@ class Program
     {
         ...
         object[][] result = GroupArray.GroupArrayElements(inputArray, numOfParts);
+
+        // alternatively, it can be called as an extension method on the array
+        // object[][] result = inputArray.GroupArrayElements(numOfParts);
         ...
     }
 }
