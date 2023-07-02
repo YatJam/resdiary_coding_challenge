@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupArrayLibrary", "GroupA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{8B9A88FA-4F64-4B02-ADDC-F42C1B1826C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupArrayLibraryTest", "GroupArrayLibraryTest\GroupArrayLibraryTest.csproj", "{4F7355C9-F4A5-4819-9B69-7BF36562F87B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{8B9A88FA-4F64-4B02-ADDC-F42C1B1826C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B9A88FA-4F64-4B02-ADDC-F42C1B1826C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B9A88FA-4F64-4B02-ADDC-F42C1B1826C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F7355C9-F4A5-4819-9B69-7BF36562F87B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F7355C9-F4A5-4819-9B69-7BF36562F87B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F7355C9-F4A5-4819-9B69-7BF36562F87B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F7355C9-F4A5-4819-9B69-7BF36562F87B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
