@@ -7,10 +7,25 @@ public static class GroupArray
     part has a length equal to the remainder.
     The method takes the following arguments:
     * input_array - array to be divided
-    * N - a positive integer indicating into how many parts the array should be split
+    * num_of_parts - a positive integer indicating into how many parts the array should be split
     */
-    public static object[][] GroupArrayElements(this object[] input_array, int n)
+    public static T[][] GroupArrayElements<T>(this T[] inputArray, int numOfParts)
     {
-        return new object[1][]{ input_array };
+        if (inputArray.Length == 0)
+        {
+            throw new ArgumentException(
+                "Parameter has to contain at least one element", nameof(inputArray)
+            );
+        }
+
+        var size = (int)Math.Ceiling((float)inputArray.Length / numOfParts);
+
+        var groupedArray = new T[numOfParts][];
+
+        for (var i = 0; i < numOfParts; i++) {
+            groupedArray[i] = inputArray.Skip(i * size).Take(size).ToArray();
+        }
+
+        return groupedArray;
     }
 }

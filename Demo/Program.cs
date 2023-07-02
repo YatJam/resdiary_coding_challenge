@@ -8,7 +8,7 @@ class Program
         string user_input = Console.ReadLine();
         string[] elements = user_input.Split(" ");
 
-        var result = GroupArray.GroupArrayElements(elements);
+        var result = GroupArray.GroupArrayElements(elements, 2);
         Console.WriteLine(result.Length);
     }
 }
