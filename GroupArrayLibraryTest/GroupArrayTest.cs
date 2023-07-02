@@ -51,6 +51,18 @@ public class GroupArrayTest
                     new int[]{ 7, 8 }
                 }
             },
+            // Case when numOfParts is higher than the length of the input array
+            new object[]
+            {
+                new int[]{ 1, 2 },
+                3,
+                new int[][]
+                {
+                    new int[]{ 1 },
+                    new int[]{ 2 },
+                    new int[]{}
+                }
+            },
         };
     [Fact]
     public void TestGroupArrayElementsWithNoRemainder()
