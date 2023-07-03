@@ -31,7 +31,7 @@ Please ensure you have the [.NET 7 SDK](https://dotnet.microsoft.com/en-us/downl
 
 ### Executing the code
 
-1. Clone the repo: from your terminal, run `git clone ...`
+1. Clone the repo: from your terminal, run `git clone https://github.com/YatJam/resdiary_coding_challenge.git`
 1. Go to the project directory: `cd resdiary_coding_challenge`
 1. To run the Demo app, run `dotnet run --project Demo/Demo.csproj`
 1. To execute the test, run `dotnet test GroupArrayLibraryTest/GroupArrayLibraryTest.csproj`
