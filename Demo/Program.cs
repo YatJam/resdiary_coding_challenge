@@ -4,15 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        string? userInputElements = string.Empty;
+        Console.WriteLine("Please enter array elements separated by spaces, e.g `1 2 3 foo`");
+        string? userInputElements = Console.ReadLine();
 
-        while(string.IsNullOrEmpty(userInputElements))
-        {
-            Console.WriteLine("Please enter array elements separated by spaces, e.g `1 2 3 foo`");
-            userInputElements = Console.ReadLine();
-        }
-
-        string[] inputArray = userInputElements.Split(" ");
+        string[] inputArray = userInputElements == null ? Array.Empty<string>() : userInputElements.Split(" ");
 
         string? userInputNumOfParts = string.Empty;
 

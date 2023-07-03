@@ -63,6 +63,17 @@ public class GroupArrayTest
                     new int[]{}
                 }
             },
+            // Case when the inputArray is empty
+            new object[]
+            {
+                Array.Empty<object>(),
+                2,
+                new object[][]
+                {
+                    new object[]{},
+                    new object[]{}
+                }
+            },
         };
 
     [Fact]
@@ -80,16 +91,6 @@ public class GroupArrayTest
             new object[]{ true, "foo" }
         };
         Assert.Equal(expected, result);
-    }
-
-    [Fact]
-    public void TestGroupArrayElementsThrowsArgumentExceptionWithEmptyInput()
-    {
-        var input = Array.Empty<object>();
-
-        var ex = Assert.Throws<ArgumentException>(() => GroupArray.GroupArrayElements(input, 3));
-
-        Assert.Equal("Parameter has to contain at least one element (Parameter 'inputArray')", ex.Message);
     }
 
     [Theory]

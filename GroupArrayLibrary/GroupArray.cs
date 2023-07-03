@@ -17,12 +17,6 @@ public static class GroupArray
     */
     public static T[][] GroupArrayElements<T>(this T[] inputArray, int numOfParts)
     {
-        if (inputArray.Length == 0)
-        {
-            throw new ArgumentException(
-                "Parameter has to contain at least one element", nameof(inputArray)
-            );
-        }
         if (numOfParts <= 0)
         {
             throw new ArgumentException(
