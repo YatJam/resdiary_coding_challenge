@@ -4,12 +4,30 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Please enter a list of elements separated by spaces, e.g `1 2 3 abc");
-        string user_input = Console.ReadLine();
-        string[] elements = user_input.Split(" ");
+        string? userInputElements = string.Empty;
 
-        var result = GroupArray.GroupArrayElements(elements, 2);
-        Console.WriteLine(result.Length);
+        while(string.IsNullOrEmpty(userInputElements))
+        {
+            Console.WriteLine("Please enter array elements separated by spaces, e.g `1 2 3 foo`");
+            userInputElements = Console.ReadLine();
+        }
+
+        string[] inputArray = userInputElements.Split(" ");
+
+        string? userInputNumOfParts = string.Empty;
+
+        while(string.IsNullOrEmpty(userInputNumOfParts))
+        {
+            Console.WriteLine("How many parts should the array be divided into?");
+            userInputNumOfParts = Console.ReadLine();
+        }
+
+        var result = GroupArray.GroupArrayElements(inputArray, Int32.Parse(userInputNumOfParts));
+
+        foreach (var part in result)
+        {
+            Console.WriteLine("[{0}]", string.Join(", ", part));
+        }
     }
 }
 
